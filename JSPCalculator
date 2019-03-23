@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<script>
+  var sum1=0;
+  var sum2=0;
+
+  for (;;)
+  {
+    str=prompt("请输入下整数（0结束）:","");
+    sym=str.charAt(0);   // 取字符串中的第1个字符
+    if (sym=='-')        // 如果为负数
+    {
+       //document.write(sym);
+       data=str.substring(1);  // 取第2个字符开始到字符串结束的所有字符
+       x=-parseInt(data);
+     }
+    else
+       x=parseInt(str);
+
+    if(x>0)
+       sum1 += x;
+    else 
+       if (x<0)
+          sum2 += x;
+       else     // 为0，退出循环
+          break;
+  }
+  document.write("输入正数的和："+sum1+"<br>");
+  document.write("输入负数的和："+sum2);
+</script>
+</body>
